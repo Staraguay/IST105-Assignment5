@@ -1,5 +1,6 @@
 import binascii
 import math
+import random
 from struct import pack_into
 
 
@@ -20,6 +21,39 @@ def process_data(number,message):
     vocals_count = sum(v in {"a", "A", "e", "E", "i", "I", "o", "O", "u", "U"} for v in message)
     print(bmessage)
     print(vocals_count)
+
+    treasure_hunt(number)
+
+def treasure_hunt(number):
+
+    attemp = 0
+    previous_numbers = set()
+
+    while True:
+        guess_number = random.randint(1, 100)
+
+        if guess_number in previous_numbers:
+            continue
+        previous_numbers.add(guess_number)
+
+        if guess_number == number:
+            print('The number is: {}'.format(guess_number))
+            break
+        else:
+            print('Attemp with {}'.format(guess_number))
+            attemp += 1
+            if attemp == 5:
+                break
+
+
+
+
+    if attemp == 5:
+        print('The number could not be guessed')
+    else:
+        print('Win')
+
+
 
 
 if __name__ == '__main__':

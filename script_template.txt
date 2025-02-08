@@ -1,0 +1,15 @@
+#!/bin/bash
+sudo dnf update -y
+sudo dnf install httpd -y
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo dnf install -y php php-cli php-mbstring php-xml
+sudo systemctl restart httpd
+cd /var/www
+sudo dnf install git -y
+sudo git clone https://github.com/Staraguay/IST105-Assignment5.git
+cd IST105-Assignment5/process
+sudo chmod +x process.py
+cd ..
+sudo chmod +x setup_apache.sh
+sudo ./setup_apache.sh

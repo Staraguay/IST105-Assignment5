@@ -5,7 +5,6 @@ PROJECT_PATH="/var/www/IST105-Assignment5"
 
 # Cambiar permisos y propietario
 sudo chown -R apache:apache "$PROJECT_PATH"  # Para Amazon Linux / CentOS
-sudo chown -R www-data:www-data "$PROJECT_PATH"  # Para Ubuntu / Debian
 sudo chmod -R 755 "$PROJECT_PATH"
 
 # Modificar configuración de Apache

@@ -51,7 +51,7 @@
     ?>
     <main>
         <div class="container">
-            <h1>Tresure Hunt - Assignment 5</h1>
+            <h1>Treasure Hunt - Assignment 5</h1>
             <form action="index.php" method="POST" class="form">
                 <label>Enter a number</label>
                 <input id="inputNumber" type="number" name="inputNumber" required>

@@ -35,6 +35,12 @@ main{
 
 }
 
+.container-response span{
+
+    font-weight: bold;
+    color: #5271d0;
+}
+
 .form{
 
     padding: 15px;
@@ -53,7 +59,7 @@ input{
     height: 25px;
 }
 
-button{
+.btn-submit{
 
     border-radius: 10px;
     border: none;
@@ -67,12 +73,12 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+.btn-submit:hover{
     background: #fff;
     border: 1px solid #5271d0;
     color: #5271d0;
     box-shadow: inset 0px 0px 15px 1px #dcdcdc;
-    transform: scale(0.8);
+    transform: scale(1.01);
 }
 
 footer{

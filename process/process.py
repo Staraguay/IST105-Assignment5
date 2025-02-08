@@ -1,6 +1,10 @@
+#!"C:\xampp\htdocs\xampp\IST105-Assignment5\.venv\Scripts\python.exe"
+#print("Content-Type: text/html\n")
 import binascii
 import math
 import random
+import sys
+import json
 
 def process_data(number,message):
     respond = {}
@@ -25,9 +29,9 @@ def process_data(number,message):
     respond['bmessage'] = bmessage
     respond['vocals'] = vocals_count
 
-    respond['treasure'] = treasure_hunt(number)
+    respond['treasure'] = treasure_hunt(num)
 
-    return respond
+    return json.dumps(respond)
 
 def treasure_hunt(number):
 
@@ -60,8 +64,8 @@ def treasure_hunt(number):
 
 
 
+
 if __name__ == '__main__':
-    n = input()
-    m = input()
-    print(process_data(n,m))
+
+    print(process_data(sys.argv[1], sys.argv[2]))
 

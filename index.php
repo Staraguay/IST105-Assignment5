@@ -64,19 +64,19 @@
 
          if(isset($_SESSION["submited"]))
          {
-        print"<div class='container-response'>
+        echo"<div class='container-response'>
             <h2>The results are</h2>
             <p>The result of the number is: <span>$nPuzzle</span></p>
             <p>The text in binary is: <span>$bMessage</span></p>
             <p>The number of vowels is: <span>$vocals</span></p>";
             if($treasure == true)
                 {
-                 print"<p><span>The number was guessed</span></p>";
+                 echo"<p><span>The number was guessed</span></p>";
                 }
             else{
-                print"<p><span>The number could not be guessed</span></p>";
+                echo"<p><span>The number could not be guessed</span></p>";
             }
-        print"</div>";
+        echo"</div>";
          }
          unset($_SESSION["submited"]); // Clear session so it doesn't show on reload
         ?>

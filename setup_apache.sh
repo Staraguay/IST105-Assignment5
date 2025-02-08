@@ -10,7 +10,6 @@ sudo chmod -R 755 "$PROJECT_PATH"
 
 # Modificar configuración de Apache
 APACHE_CONF="/etc/httpd/conf/httpd.conf"  # Para Amazon Linux / CentOS
-fi
 
 # Reemplazar la configuración de DocumentRoot
 sudo sed -i "s|DocumentRoot .*|DocumentRoot $PROJECT_PATH|g" "$APACHE_CONF"

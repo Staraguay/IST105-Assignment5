@@ -1,5 +1,3 @@
-#!"C:\xampp\htdocs\xampp\IST105-Assignment5\.venv\Scripts\python.exe"
-#print("Content-Type: text/html\n")
 import binascii
 import math
 import random

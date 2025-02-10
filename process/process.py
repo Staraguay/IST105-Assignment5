@@ -36,7 +36,8 @@ def treasure_hunt(number):
     attemp = 0
     previous_numbers = set()
 
-    while True:
+    while attemp < 5:
+
         guess_number = random.randint(1, 100)
 
         if guess_number in previous_numbers:
@@ -45,19 +46,12 @@ def treasure_hunt(number):
 
         if guess_number == number:
             #print('The number is: {}'.format(guess_number))
-            break
+            return True
         else:
             #print('Attemp with {}'.format(guess_number))
-            attemp += 1
-            if attemp == 5:
-                break
-
-    if attemp == 5:
-        #print('The number could not be guessed')
-        return False
-    else:
-        #print('Win')
-        return True
+            if attemp == 4:
+                return False
+        attemp += 1
 
 
 
